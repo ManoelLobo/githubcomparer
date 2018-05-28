@@ -1,13 +1,7 @@
 import React from 'react';
-
+import Main from './pages/Main';
 import './styles/global';
 
-const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <h1>GitHub Comparer</h1>
-    </header>
-  </div>
-);
+const App = () => <Main />;
 
 export default App;
