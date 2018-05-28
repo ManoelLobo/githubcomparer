@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles/global';
+
 const App = () => (
   <div className="App">
     <header className="App-header">
