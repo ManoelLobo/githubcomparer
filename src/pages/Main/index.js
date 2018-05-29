@@ -8,6 +8,7 @@ import api from '../../services/api';
 export default class Main extends Component {
   state = {
     repositoryInput: '',
+    repositoryError: false,
     repositories: [],
   };
 
@@ -21,11 +22,11 @@ export default class Main extends Component {
 
       this.setState({
         repositories: [...this.state.repositories, repository],
+        repositoryInput: '',
+        repositoryError: false,
       });
-
-      this.setState({ repositoryInput: '' });
     } catch (err) {
-      console.log(err);
+      this.setState({ repositoryError: true });
     }
   };
 
@@ -34,7 +35,7 @@ export default class Main extends Component {
       <Container>
         <img src={logo} alt="GitHub Comparer" />
 
-        <Form onSubmit={this.handleAddRepository}>
+        <Form isErr={this.state.repositoryError} onSubmit={this.handleAddRepository}>
           <input
             type="text"
             placeholder="User/Repo"
