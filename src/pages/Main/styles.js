@@ -30,7 +30,7 @@ export const Form = styled.form`
     height: 55px;
     padding: 0 20px;
     margin-left: 10px;
-    background: #63f5b8;
+    background: #369900;
     color: #fff;
     border: 0;
     font-size: 20px;
@@ -38,7 +38,7 @@ export const Form = styled.form`
     border-radius: 3px;
 
     &:hover {
-      background: #52d89f;
+      background: #54992e;
     }
   }
 `;
